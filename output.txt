@@ -1,0 +1,3 @@
+./public/next.svg
+./public/thirteen.svg
+./public/vercel.svg

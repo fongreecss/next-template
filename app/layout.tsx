@@ -1,5 +1,6 @@
 import './globals.css'
-import MainNavigation from '../components/ui/main-navigation'
+import MainNavigation from '../components/MainNavigation/MainNavigation'
+import SlimNavigation from '../components/SlimNavigation/SlimNavigation'
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header>
+          <SlimNavigation />
           <MainNavigation />
         </header>
         <main>{children}</main>

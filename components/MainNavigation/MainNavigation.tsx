@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './main-navigation.module.css'
+import styles from './MainNavigation.module.css'
 
 export default function MainNavigation() {
   return (
