@@ -8,20 +8,20 @@ export default function SlimNavigation() {
                 <li>
                     <Link
                         aria-current="page"
-                        href="/our-story"
+                        href="/"
                         className="router-link-active router-link-exact-active flex px-3 py-1.5 transition duration-100 rounded-[5px] bg-gray-100 bg-opacity-10 text-gray-100"
                         data-id="f4928d74-8cc0-4c4e-b2ac-cee0c416cd0a"
                     >
-                        This is us
+                        Home
                     </Link>
                 </li>
                 <li>
                     <Link
-                        href="/our-story/for-media"
+                        href="/about"
                         className="flex px-3 py-1.5 transition duration-100 rounded-[5px] text-gray-200"
                         data-id="7946f1f8-2389-4e8b-88c4-dd681d6a7d29"
                     >
-                        Media
+                        About
                     </Link>
                 </li>
             </ol>
