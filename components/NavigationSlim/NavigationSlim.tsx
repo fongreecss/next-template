@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import styles from './SlimNavigation.module.css'
+import Link from 'next/link';
 
 export default function SlimNavigation() {
     return (

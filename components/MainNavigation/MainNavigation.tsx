@@ -6,10 +6,10 @@ export default function MainNavigation() {
     <nav>
       <ul>
         <li>
-          <Link className="text-center" href="/">Home</Link>
+          <Link className="" href="/">Home</Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link className="" href="/about">About</Link>
         </li>
       </ul>
     </nav>

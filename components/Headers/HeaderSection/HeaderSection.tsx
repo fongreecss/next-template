@@ -1,9 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Roboto } from 'next/font/google'
 import styles from './HeaderSection.module.css'
 
-const roboto = Roboto({ subsets: ['latin'] })
+
 /*
 
 .description {
@@ -74,10 +73,10 @@ export default function HeaderSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={`${roboto.className} font-sans`}>
+          <h2>
             Docs <span>-&gt;</span>
           </h2>
-          <p className={roboto.className}>
+          <p>
             Find in-depth information about Next.js features and API.
           </p>
         </a>
@@ -88,10 +87,10 @@ export default function HeaderSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={roboto.className}>
+          <h2>
             Templates <span>-&gt;</span>
           </h2>
-          <p className={roboto.className}>Explore the Next.js 13 playground.</p>
+          <p>Explore the Next.js 13 playground.</p>
         </a>
 
         <a
@@ -100,10 +99,10 @@ export default function HeaderSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={roboto.className}>
+          <h2>
             Deploy <span>-&gt;</span>
           </h2>
-          <p className={roboto.className}>
+          <p>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
