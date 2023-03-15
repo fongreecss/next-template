@@ -1,5 +1,6 @@
 import HeaderSection from '../components/Headers/HeaderSection/HeaderSection'
 import ContactForm from '../components/Forms/ContactForm'
+import Popup from '../components/Popups/Popup'
 
 export const metadata = {
   title: 'Home Is Where The Heart Is',
@@ -11,7 +12,7 @@ export default function HomePage() {
     <>
       <HeaderSection />
       <section>
-        <ContactForm />
+        <Popup />
       </section>
     </>
     
