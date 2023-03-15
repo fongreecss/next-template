@@ -1,6 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './HeaderSection.module.css'
+import Popup from '../../Popups/Popup'
 
 
 /*
@@ -32,11 +35,13 @@ import styles from './HeaderSection.module.css'
     border-radius: var(--border-radius);
 }
 */
-export default function HeaderSection() {
+const HeaderSection:React.FC = () => {
   return (
     <section className="flex flex-col justify-between items-center p-[6rem]">
       <div className="flex justify-between w-full align-middle text-base">
-        <p className="font-bold">Get started by editing</p>
+        <p className="font-bold">
+          <Popup />
+        </p>
         <div>
           <Link
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -110,3 +115,5 @@ export default function HeaderSection() {
     </section>
   )
 }
+
+export default HeaderSection;

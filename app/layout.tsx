@@ -27,7 +27,6 @@ export default function RootLayout({
       <body className={roboto.className}>
         <header>
           <SlimNavigation />
-          <MainNavigation />
         </header>
         <main>{children}</main>
         <SlimFooter />
