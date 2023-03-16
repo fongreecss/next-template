@@ -24,8 +24,7 @@ const ContactForm: React.FC<PropsData> = ({
 
   const [formData, setFormData] = useState<FormData>({ email: '', message: '' });
   const [responseStatus, setResponseStatus] = useState<'success' | 'error' | null>(null);
-
-
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 

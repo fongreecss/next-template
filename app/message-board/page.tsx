@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import ContactForm from '@/components/components/Forms/ContactForm'
-//import styles from './contact.module.css'
 
 export const metadata = {
   title: 'Contact Us',
