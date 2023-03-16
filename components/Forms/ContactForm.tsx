@@ -10,18 +10,22 @@ interface FormData {
 
 interface PropsData {
   title?: string;
-  successMessage?: string;
+  successText?: string;
+  sendButtonText?: string;
+  errorText?: string;
 }
 
-const ContactForm: React.FC<PropsData> = ({ 
-  title = "Write us a message", 
-  successMessage = "Success!!" 
+const ContactForm: React.FC<PropsData> = ({
+  title = "Write us a message",
+  successText = "Success!!",
+  sendButtonText = "Send message",
+  errorText = "Error!!",
 }) => {
 
   const [formData, setFormData] = useState<FormData>({ email: '', message: '' });
   const [responseStatus, setResponseStatus] = useState<'success' | 'error' | null>(null);
 
-  
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -46,45 +50,46 @@ const ContactForm: React.FC<PropsData> = ({
   return (
     <>
       {responseStatus === 'success' ? (
-        <p>{successMessage}</p>
+        <p>{successText}</p>
       ) : (
         <form onSubmit={handleSubmit} className="w-full max-w-lg">
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3 mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
-              </div>
-              <div className="w-full px-3">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
+          <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full px-3 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+            </div>
+            <div className="w-full px-3">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
                 Email
-                </label>
-                <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-email"
-                    type="text"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required 
-                />
-                <p className="text-red-500 hidden text-xs italic">Please fill out this field.</p>
-              </div>
-              <div className="w-full px-3">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-message">
+              </label>
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-email"
+                type="text"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                required
+              />
+              <p className="text-red-500 hidden text-xs italic">Please fill out this field.</p>
+            </div>
+            <div className="w-full px-3">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-message">
                 Message
-                </label>
-                <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                ></textarea>
-                <p className="text-red-500 hidden text-xs italic">Please fill out this field.</p>
-              </div>
-              <div className="w-full px-3">
+              </label>
+              <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-message"
+                value={formData.message}
+                rows={5}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                required
+              ></textarea>
+              <p className="text-red-500 hidden text-xs italic">Please fill out this field.</p>
+            </div>
+            <div className="w-full px-3">
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                Send
+                {sendButtonText}
               </button>
             </div>
-            </div>
+          </div>
         </form>
       )}
-      {responseStatus === 'error' && <p>Error!</p>}
+      {responseStatus === 'error' && <p>{errorText}</p>}
     </>
   );
 };
