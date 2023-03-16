@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function FooterSlim() {
+const FooterSlim = () => {
     return (
         <footer className="mx-0 lg:bg-gray-500 lg:w-full">
             <div className="max-w-6xl mx-auto flex flex-col flex-wrap justify-between w-full pb-8 text-xs text-gray-200 lg:flex-row lg:flex-nowrap lg:py-5">
@@ -33,3 +33,5 @@ export default function FooterSlim() {
         </footer>
     );
 }
+
+export default FooterSlim;

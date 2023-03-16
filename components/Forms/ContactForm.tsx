@@ -8,10 +8,20 @@ interface FormData {
   message: string;
 }
 
-const ContactForm: React.FC = () => {
+interface PropsData {
+  title?: string;
+  successMessage?: string;
+}
+
+const ContactForm: React.FC<PropsData> = ({ 
+  title = "Write us a message", 
+  successMessage = "Success!!" 
+}) => {
+
   const [formData, setFormData] = useState<FormData>({ email: '', message: '' });
   const [responseStatus, setResponseStatus] = useState<'success' | 'error' | null>(null);
 
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -36,12 +46,12 @@ const ContactForm: React.FC = () => {
   return (
     <>
       {responseStatus === 'success' ? (
-        <p>Success!</p>
+        <p>{successMessage}</p>
       ) : (
         <form onSubmit={handleSubmit} className="w-full max-w-lg">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full px-3 mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">Contact Us</h2>
+                <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
               </div>
               <div className="w-full px-3">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
