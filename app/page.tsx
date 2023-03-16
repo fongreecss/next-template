@@ -1,5 +1,5 @@
 import HeaderSection from '../components/Headers/HeaderSection/HeaderSection'
-import ContactForm from '../components/Forms/ContactForm'
+//import ContactForm from '../components/Forms/ContactForm'
 
 export const metadata = {
   title: 'Home Is Where The Heart Is',

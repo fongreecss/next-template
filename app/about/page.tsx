@@ -8,8 +8,8 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-      <div className="font-bold">
-        AboutPage
-      </div>
+    <section className="flex flex-col justify-between py-[6rem] px-8 max-w-7xl mx-auto">
+      <h2 className="">About Page</h2>
+    </section>
   )
 }

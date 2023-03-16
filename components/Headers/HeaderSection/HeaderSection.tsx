@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './HeaderSection.module.css'
@@ -37,7 +35,7 @@ import Popup from '../../Popups/Popup'
 */
 const HeaderSection:React.FC = () => {
   return (
-    <section className="flex flex-col justify-between items-center p-[6rem]">
+    <section className="flex flex-col justify-between items-center py-[6rem] px-8 max-w-7xl mx-auto">
       <div className="flex justify-between w-full align-middle text-base">
         <p className="font-bold">
           <Popup />

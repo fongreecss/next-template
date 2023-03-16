@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function FooterSlim() {
     return (
         <footer className="mx-0 lg:bg-gray-500 lg:w-full">
-            <div className="max-w-6xl px-6 mx-auto flex flex-col flex-wrap justify-between w-full pb-8 text-xs text-gray-200 lg:flex-row lg:flex-nowrap lg:py-5">
+            <div className="max-w-6xl mx-auto flex flex-col flex-wrap justify-between w-full pb-8 text-xs text-gray-200 lg:flex-row lg:flex-nowrap lg:py-5">
                 <nav className="flex flex-col flex-wrap p-4 space-y-2 bg-gray-500 lg:flex-shrink lg:flex-row lg:space-y-0 lg:p-0">
                     <span className="text-center lg:w-auto lg:text-left">
                         

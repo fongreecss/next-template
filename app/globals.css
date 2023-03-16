@@ -110,3 +110,9 @@ a {
     color-scheme: dark;
   }
 }
+
+.section-wrapper-boxed {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  @apply  flex flex-col justify-between items-center px-[6rem];
+}
