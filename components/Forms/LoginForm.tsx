@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-//import { useRouter } from "next/router";
+
 
 interface LoginFormData {
   email: string;
@@ -28,7 +28,7 @@ const LoginForm: React.FC = () => {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        //router.push("/about"); // Redirect to dashboard if login successful
+        route("/about"); // Redirect to dashboard if login successfulnp
       } else {
         alert('Invalid email or password'); // Show error message otherwise
       }

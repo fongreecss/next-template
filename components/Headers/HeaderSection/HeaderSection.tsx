@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './HeaderSection.module.css'
 import Popup from '../../Popups/Popup'
+import ApplicationLogo from '../../Utils/ApplicationLogo'
+
 
 
 /*
@@ -46,14 +48,7 @@ const HeaderSection:React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-          <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-          />
+          <ApplicationLogo size="10px" alt="Vercel Logo" />
           </Link>
         </div>
       </div>
