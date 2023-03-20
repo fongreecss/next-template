@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { ReactNode } from 'react';
 
 type ButtonProps = {
-  onClick?: () => void;
+  onClick: () => void;
   color?: string;
   bgColor?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -27,10 +27,9 @@ const NormalButton: React.FC<ButtonProps> = ({
   };
 
   return (
-    <Link href={href} target={`_blank`}>
-      <button
+    <Link href={href} target={`_blank`} onClick={onClick}>
+      <button 
         className={`bg-${bgColor} text-${color} ${sizes[size]} rounded-md shadow`}
-        onClick={onClick}
       >
         {children}
       </button>
