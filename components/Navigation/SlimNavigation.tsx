@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NormalButton from '../Utils/NormalButton';
 //import { useRouter } from 'next/router';
 
 const menuItems = [
@@ -23,6 +24,7 @@ const SlimNavigation = () => {
             </Link>
           </li>
         ))}
+        <li><NormalButton href="/about">Button to About</NormalButton></li>
       </ol>
     </div>
   );
