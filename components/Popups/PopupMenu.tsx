@@ -22,7 +22,7 @@ const recentPosts = [
   { id: 3, title: 'Improve your customer experience', href: '#', date: 'Feb 21, 2023', datetime: '2023-02-21' },
 ]
 
-const Popup = () => {
+const PopupMenu = () => {
   return (
     <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
@@ -85,4 +85,4 @@ const Popup = () => {
   )
 }
 
-export default Popup;
+export default PopupMenu;

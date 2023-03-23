@@ -11,6 +11,7 @@ const roboto = Roboto({
 import MainNavigation from '../components/MainNavigation/MainNavigation'
 import SlimNavigation from '../components/Navigation/SlimNavigation'
 import SlimFooter from '../components/Footers/SlimFooter/SlimFooter'
+import NormalMenu from '../components/Navigation/NormalMenu'
 
 export const metadata = {
   title: 'Create Next App',
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <header>
           <SlimNavigation />
+          <NormalMenu />
         </header>
         <main>{children}</main>
         <SlimFooter />

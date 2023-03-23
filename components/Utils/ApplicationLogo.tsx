@@ -12,11 +12,12 @@ interface ApplicationLogoProps {
     height?: number;
   }
 
-const ApplicationLogo: React.FC<ApplicationLogoProps> = ({ size='100px', alt="Your Logo Text", width = 283, height = 64 }) => {
+const ApplicationLogo: React.FC<ApplicationLogoProps> = ({ size='md', alt="Your Logo Text", width = 283, height = 64 }) => {
+  const sz = size === 'sm' ? 'w-8 h-auto' : size === 'md' ? 'w-16 h-auto' : 'w-32 h-auto';
 
   return (
     <Image
-      className={`w-[${size}] h-auto`}
+      className={sz}
       src="/vercel.svg"
       alt={alt}
       width={width}
