@@ -7,7 +7,9 @@ const menuItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Message Board', href: '/message-board' },
-  { name: 'Login Page', href: '/login'}
+  { name: 'Login Page', href: '/login'},
+  { name: 'Register Page', href: '/register'},
+  { name: 'Cards', href: '/cards'},
 ]
 
 const SlimNavigation = () => {

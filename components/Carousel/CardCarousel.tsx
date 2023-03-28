@@ -1,4 +1,5 @@
-import { useState } from "react";
+'use client'
+import { useState, useRef } from "react";
 
 type CardCarouselProps = {
   cards: {
@@ -10,13 +11,25 @@ type CardCarouselProps = {
 
 const CardCarousel = ({ cards }: CardCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const prevCard = () => {
     setActiveIndex((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
+    if (containerRef.current) {
+      setScrollPosition(
+        containerRef.current.scrollLeft - containerRef.current.offsetWidth
+      );
+    }
   };
 
   const nextCard = () => {
     setActiveIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
+    if (containerRef.current) {
+      setScrollPosition(
+        containerRef.current.scrollLeft + containerRef.current.offsetWidth
+      );
+    }
   };
 
   return (
@@ -35,7 +48,7 @@ const CardCarousel = ({ cards }: CardCarouselProps) => {
           &gt;
         </button>
       </div>
-      <div className="flex overflow-x-auto">
+      <div className="flex" ref={containerRef} style={{ scrollLeft: scrollPosition }}>
         {cards.map((card, index) => (
           <div
             key={card.id}
@@ -48,6 +61,20 @@ const CardCarousel = ({ cards }: CardCarouselProps) => {
           </div>
         ))}
       </div>
+      <style jsx>{`
+        .flex {
+          display: flex;
+          overflow-x: auto;
+          scroll-behavior: smooth;
+        }
+
+        /* Scroll Snap Type property */
+
+        .flex > div {
+          scroll-snap-align: start;
+          margin-right: 16px;
+        }
+      `}</style>
     </div>
   );
 };

@@ -6,12 +6,34 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { BookmarkSquareIcon, CalendarDaysIcon, LifebuoyIcon } from '@heroicons/react/24/outline'
 
 const resources = [
-  { name: 'Help center', description: 'Get all of your questions answered', href: '#', icon: LifebuoyIcon },
-  { name: 'Guides', description: 'Learn how to maximize our platform', href: '#', icon: BookmarkSquareIcon },
-  { name: 'Events', description: 'See meet-ups and other events near you', href: '#', icon: CalendarDaysIcon },
+  {
+    name: 'Help center',
+    description: 'Get all of your questions answered',
+    href: '#',
+    icon: LifebuoyIcon
+  },
+  {
+    name: 'Guides',
+    description: 'Learn how to maximize our platform',
+    href: '#',
+    icon: BookmarkSquareIcon
+  },
+  {
+    name: 'Events',
+    description: 'See meet-ups and other events near you',
+    href: '#',
+    icon: CalendarDaysIcon
+  },
 ]
+
 const recentPosts = [
-  { id: 1, title: 'Boost your conversion rate', href: '#', date: 'Mar 5, 2023', datetime: '2023-03-05' },
+  {
+    id: 1,
+    title: 'Boost your conversion rate',
+    href: '#',
+    date: 'Mar 5, 2023',
+    datetime: '2023-03-05'
+  },
   {
     id: 2,
     title: 'How to use search engine optimization to drive traffic to your site',
@@ -19,7 +41,13 @@ const recentPosts = [
     date: 'Feb 25, 2023',
     datetime: '2023-02-25',
   },
-  { id: 3, title: 'Improve your customer experience', href: '#', date: 'Feb 21, 2023', datetime: '2023-02-21' },
+  {
+    id: 3,
+    title: 'Improve your customer experience',
+    href: '#',
+    date: 'Feb 21, 2023',
+    datetime: '2023-02-21'
+  },
 ]
 
 const PopupMenu = () => {
